@@ -2,9 +2,9 @@
   <div class="single-box community-details p-5">
     <ng-container *ngIf="communityDetails?.coverImg">
       <img data-src="{{
-          communityDetails?.coverImg || '/assets/images/profile-cover.png'
+          communityDetails?.coverImg || '/assets/images/Crypto-Consulting-Banner.jpg'
         }}" class="w-100 h-272-px rounded-3 mb-5"
-        onerror="this.onerror=null;this.src='/assets/images/profile-cover.png';" [alt]="'Preview Image'" />
+        onerror="this.onerror=null;this.src='/assets/images/Crypto-Consulting-Banner.jpg';" [alt]="'Preview Image'" />
     </ng-container>
 
     <div class="text-start d-flex align-items-center gap-3">
@@ -278,7 +278,7 @@
               <button ngbDropdownItem *ngIf="communityDetails.profileId === profileId">
                 <a class="droplist d-flex align-items-center gap-2" (click)="deleteCommunity()">
                   <fa-icon [icon]="['fas', 'trash-can']" />
-                  <span>Delete Community</span>
+                  <span>Delete Crypto Consultants</span>
                 </a>
               </button>
             </div>
