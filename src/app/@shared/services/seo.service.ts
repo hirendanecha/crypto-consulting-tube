@@ -69,7 +69,7 @@ export class SeoService {
     }
 
     if (!tagValue.image) {
-      tagValue.image = 'https://freedom.buzz/assets/images/banner/Crypto-Consulting-Logo.jpg';
+      tagValue.image = 'https://www.cryptoconsulting.tube/assets/images/Crypto-Consulting-Banner.jpg';
     }
 
     this.meta.updateTag({

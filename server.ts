@@ -86,9 +86,9 @@ export function app(): express.Express {
         var seo: any = {
           title: 'Cryptoconsulting.Tube',
           description:
-            'Talk face-to-face with top cruptocurrecy consultants around the world Cryptocurrency Social Network.',
+            'Talk face-to-face with top crypto currency consultants around the world Cryptocurrency Social Network.',
           image:
-            'https://www.cryptoconsulting.tube/assets/images/Ht-Profile-pic-default.png',
+            'https://www.cryptoconsulting.tube/assets/images/Crypto-Consulting-Banner.jpg',
           site: 'https://www.cryptoconsulting.tube/',
           url: 'https://www.cryptoconsulting.tube' + params,
           keywords: 'crypto consulting Tube',
@@ -155,7 +155,7 @@ export function app(): express.Express {
           const talent = {
             name: post?.title || post?.albumname || 'Cryptoconsulting.Tube Post',
             description: pdhtml?.textContent || 'Post content',
-            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.cryptoconsulting.tube/assets/images/Ht-Profile-pic-default.png',
+            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.cryptoconsulting.tube/assets/images/Crypto-Consulting-Banner.jpg',
           };
           seo.title = talent.name;
           seo.description = strip_html_tags(talent.description);
