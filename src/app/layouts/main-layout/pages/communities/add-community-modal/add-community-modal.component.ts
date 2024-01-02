@@ -25,7 +25,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-community-modal.component.scss'],
 })
 export class AddCommunityModalComponent implements OnInit, AfterViewInit {
-  @Input() title: string | undefined = 'Apply to be Health Practitioner';
+  @Input() title: string | undefined = 'Apply to be Crypto Consultants';
   @Input() cancelButtonLabel: string | undefined = 'Cancel';
   @Input() confirmButtonLabel: string | undefined = 'Create';
   @Input() closeIcon: boolean | undefined;
@@ -38,7 +38,7 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
   selectedFile: File;
   userId = '';
   profileId = '';
-  originUrl = environment.webUrl + 'health-practitioner/';
+  originUrl = environment.webUrl + 'crypto-consultants/';
   logoImg: any = {
     file: null,
     url: '',
@@ -182,10 +182,10 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
               this.submitted = true;
               this.createCommunityAdmin(res.data);
               this.toastService.success(
-                'Your Health Practitioner will be approved within 24 hours!'
+                'Your Crypto Consultants will be approved within 24 hours!'
               );
               this.activeModal.close('success');
-              this.router.navigate(['/health-practitioner']);
+              this.router.navigate(['/crypto-consultants']);
             }
           },
           error: (err) => {
@@ -210,14 +210,14 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
               this.submitted = true;
               // this.createCommunityAdmin(res.data);
               this.toastService.success(
-                'Your Health Practitioner edit successfully!'
+                'Your Crypto Consultants edit successfully!'
               );
               this.activeModal.close('success');
             }
           },
           error: (err) => {
             this.toastService.danger(
-              'Please change Health Practitioner. this Health Practitioner name already in use.'
+              'Please change Crypto Consultants. this Crypto Consultants name already in use.'
             );
             this.spinner.hide();
           },
@@ -348,6 +348,6 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
   }
 
   clearForm(){
-    this.router.navigate(['/health-practitioner'])
+    this.router.navigate(['/crypto-consultants'])
   }
 }

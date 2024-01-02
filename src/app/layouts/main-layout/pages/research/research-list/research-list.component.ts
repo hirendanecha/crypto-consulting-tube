@@ -63,7 +63,7 @@ export class ResearchListComponent {
     private seoService: SeoService
   ) {
     const data = {
-      title: 'HealingTube Research',
+      title: 'CryptoConsultingTube Research',
       url: `${window.location.href}`,
       description: '',
     };
@@ -203,7 +203,7 @@ export class ResearchListComponent {
           next: (res) => {
             if (res) {
               console.log('res : ', res);
-              this.toastService.success('Research added successfully.');
+              this.toastService.success('Crypto Research added successfully.');
               this.groupsAndPosts();
             } else {
               this.toastService.danger(res['message']);

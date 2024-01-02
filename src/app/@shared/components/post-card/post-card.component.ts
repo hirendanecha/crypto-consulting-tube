@@ -229,7 +229,7 @@ export class PostCardComponent implements OnInit {
         centered: true,
         size: 'lg',
       });
-      modalRef.componentInstance.title = 'Edit Research Details';
+      modalRef.componentInstance.title = 'Edit Crypto Research Details';
       modalRef.componentInstance.confirmButtonLabel = 'Save';
       modalRef.componentInstance.cancelButtonLabel = 'Cancel';
       modalRef.componentInstance.data = post;

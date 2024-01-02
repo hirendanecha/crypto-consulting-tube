@@ -36,12 +36,12 @@
       <li class="ms-1">
         <a
           class="d-flex gap-4"
-          routerLink="/health-practitioner"
+          routerLink="/crypto-consultants"
           routerLinkActive="active"
           (click)="closeSidebar()"
         >
           <fa-icon [icon]="['fas', 'house-medical']" class="font-24-px" />
-          <span>Health Practitioner</span>
+          <span>Crypto Consultants</span>
         </a>
       </li>
       <li class="ms-1">
@@ -52,7 +52,7 @@
           (click)="closeSidebar()"
         >
           <fa-icon [icon]="['fas', 'stethoscope']" class="font-24-px" />
-          <span>Healing Topics</span>
+          <span>Crypto Consulting</span>
         </a>
       </li>
       <li class="ms-1">
@@ -75,10 +75,10 @@
           class="d-flex gap-4"
           data-toggle="tooltip"
           data-placement="bottom"
-          title="Research"
+          title="Crypto Research"
         >
           <fa-icon [icon]="['fas', 'book-open']" class="font-24-px" />
-          <span>Research</span>
+          <span>Crypto Research</span>
         </a>
       </li>
 
@@ -230,22 +230,21 @@
       </div>
     </ng-container>
   </ng-container>
-  <ng-container *ngIf="!tokenService.getCredentials()">
+  <ng-container *ngIf="!tokenService.getCredentials()"> 
     <div class="dashboard-img mb-5">
       <img
         class="w-100 rounded-3"
-        src="/assets/images/landingpage/Healing-Tube-Logo.png"
+        src="/assets/images/landingpage/Crypto-Consulting-Logo.jpg"
       />
       <!-- <span class="mt-3 text-start font-14-px">
         The Umbrella platform for All freedom based projects worldwide.
       </span> -->
       <span class="c-fonts text-center mt-6">
-        Private video consultations with Naturopathic Doctors <br />
-        and Holistic Healers from around the world
+        Talk face-to-face with top cruptocurrecy consultants around the world Cryptocurrency Social Network.
       </span>
-      <span class="c-fonts py-6 mt-10 text-center"
+      <!-- <span class="c-fonts py-6 mt-10 text-center"
         >Social Discussion on how to heal various ailments</span
-      >
+      > -->
     </div>
   </ng-container>
 </div>

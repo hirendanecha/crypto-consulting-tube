@@ -86,7 +86,7 @@ export function app(): express.Express {
         var seo: any = {
           title: 'Cryptoconsulting.Tube',
           description:
-            'Private video consultations with Naturopathic Doctors and Holistic Healers from around the world. Social Discussion on how to heal various ailments.',
+            'Talk face-to-face with top cruptocurrecy consultants around the world Cryptocurrency Social Network.',
           image:
             'https://www.cryptoconsulting.tube/assets/images/Ht-Profile-pic-default.png',
           site: 'https://www.cryptoconsulting.tube/',
@@ -94,7 +94,7 @@ export function app(): express.Express {
           keywords: 'crypto consulting Tube',
         };
         if (
-          params.indexOf('communities/') > -1 ||
+          params.indexOf('crypto-consultants/') > -1 ||
           params.indexOf('pages/') > -1
         ) {
           let id = params.split('/');
@@ -170,7 +170,7 @@ export function app(): express.Express {
 
           console.log('group===>', group);
           const talent = {
-            name: `cryptoconsultingTube Research ${group?.PageTitle}`,
+            name: `cryptoconsultingTube Crypto Research ${group?.PageTitle}`,
             description: group?.PageDescription,
             image: group?.CoverPicName || group?.ProfilePicName
           };

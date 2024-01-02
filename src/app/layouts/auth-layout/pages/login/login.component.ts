@@ -55,10 +55,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
       this.type = 'success';
     }
     const data = {
-      title: 'HealingTube login',
+      title: 'CryptoConsultingTube login',
       url: `${environment.webUrl}login`,
       description: 'login page',
-      image: `${environment.webUrl}assets/images/landingpage/Healing-Tube-Logo.png`,
+      image: `${environment.webUrl}assets/images/landingpage/Crypto-Consulting-Logo.jpg`,
     };
     // this.seoService.updateSeoMetaData(data);
   }
