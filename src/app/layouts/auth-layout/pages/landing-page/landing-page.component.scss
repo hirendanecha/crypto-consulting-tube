@@ -30,15 +30,15 @@
       width: 100%;
       // background-color: #0b0d0ed4;
       border-radius: 5px;
-      padding: 40px 9px;
+      padding: 100px 10px;
       height: 300px;
       span {
         h1 {
-          font-size: min(max(30px, 3vw), 50px);
+          font-size: min(max(28px, 2vw), 50px);
           font-weight: 700;
         }
         h3 {
-          font-size: min(max(18px, 2vw), 32px);
+          font-size: min(max(22px, 2vw), 32px);
         }
       }
     }
