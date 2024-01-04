@@ -17,11 +17,17 @@
 
   .custom-height {
     background-image: url(/assets/images/landingpage/Crypto-Consulting-Home.jpg);
-    background-size: 100% 100%;
-    background-position: center center;
+    // background-size: 100% 100%;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // object-fit: cover;
+    // height: calc(100vh - 48px);
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     object-fit: cover;
     height: calc(100vh - 48px);
+    min-height: 400px;
 
     .banner-text {
       max-width: 800px;
@@ -42,10 +48,10 @@
     }
 
     @media (max-width: 900px) {
-      .banner-text {
-        background-color: #0b0d0ed4;
-        padding: 40px 10px;
-      }
+      // .banner-text {
+      //   background-color: #0b0d0ed4;
+      //   padding: 40px 10px;
+      // }
     }
   }
   .sub-container {
