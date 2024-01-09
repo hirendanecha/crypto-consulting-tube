@@ -29,6 +29,10 @@
     height: calc(100vh - 48px);
     min-height: 400px;
 
+    @media(max-width:750px){
+      background-position: 26%;
+    }
+
     .banner-text {
       max-width: 800px;
       width: 100%;
@@ -47,12 +51,11 @@
       }
     }
 
-    @media (max-width: 900px) {
-      // .banner-text {
-      //   background-color: #0b0d0ed4;
-      //   padding: 40px 10px;
-      // }
-    }
+    // @media (max-width: 500px) {
+    //   .banner-text {
+    //     padding: 40px 10px;
+    //   }
+    // }
   }
   .sub-container {
     display: flex;
