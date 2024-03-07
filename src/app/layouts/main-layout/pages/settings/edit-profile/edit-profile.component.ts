@@ -86,7 +86,7 @@ export class EditProfileComponent implements OnInit, AfterViewInit {
     fromEvent(this.zipCode.nativeElement, 'input')
       .pipe(debounceTime(1000))
       .subscribe((event) => {
-        this.onZipChange(event['target'].value);
+        // this.onZipChange(event['target'].value);
       });
   }
 
@@ -330,5 +330,12 @@ export class EditProfileComponent implements OnInit, AfterViewInit {
         this.isNotificationSoundEnabled ? 'Y' : 'N'
       );
     }
+  }
+
+  convertToUppercase(event: any) {
+    const inputElement = event.target as HTMLInputElement;
+    let inputValue = inputElement.value;   
+    inputValue = inputValue.replace(/\s/g, '');
+    inputElement.value = inputValue.toUpperCase();
   }
 }
