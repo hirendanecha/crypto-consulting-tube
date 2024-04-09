@@ -141,10 +141,15 @@ export class HeaderComponent {
   }
 
   openRightSidebar() {
+    if(this.tokenService.getCredentials()){
     this.offcanvasService.open(RightSidebarComponent, {
       position: 'end',
       panelClass: 'w-300-px',
     });
+  }
+  else{
+    this.openRightSidebar();
+  }
   }
 
   scrollToTop() {
