@@ -64,6 +64,12 @@
 }
 
 .healing-sub-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 20px);
+  margin: auto;
+  justify-content: center;
   .card {
     width: 366px;
     background: var(--section-1st-color);

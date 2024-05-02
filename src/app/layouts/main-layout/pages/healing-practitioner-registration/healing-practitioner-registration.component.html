@@ -102,9 +102,7 @@
   </div> -->
 
   <div class="healing-sub-container">
-    <h2 class="text-center mt-10">
-      Emphasis of Consulting
-    </h2>
+    <h2 class="text-center mt-10">Emphasis of Consulting</h2>
     <div class="d-flex justify-content-center mt-5">
       <div class="d-flex flex-wrap justify-content-center">
         <div *ngFor="let card of cards" class="card text-center">
@@ -124,54 +122,54 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="d-flex flex-column mt-6 mt-sm-10">
-    <h4>Areas of Consulting</h4>
-    <div class="container">
-      <div class="row">
-        <div *ngFor="let area of practitionerArea" class="col-md-6 col-lg-3">
-          <div class="form-check">
-            <div class="d-flex align-items-center">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                [value]="area.aId"
-                id="modality{{ area.aId }}"
-                (change)="onAreaboxChange($event, area)"
-              />
-              <div class="title-container">
+    <div class="d-flex flex-column mt-6 mt-sm-10">
+      <h4>Areas of Consulting</h4>
+      <div class="container">
+        <div class="row">
+          <div *ngFor="let area of practitionerArea" class="col-md-6 col-lg-3">
+            <div class="form-check">
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [value]="area.aId"
+                  id="modality{{ area.aId }}"
+                  (change)="onAreaboxChange($event, area)"
+                />
+                <div class="title-container">
                 <label class="form-check-label ms-2" for="modality{{ area.aId }}" [title]="area.name">
-                  {{ area.name }}
-                </label>
+                    {{ area.name }}
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-100 mt-5 mt-sm-20">
-    <button
-      *ngIf="!isFromHome"
-      (click)="backPreview()"
-      class="btn btn-primary d-flex align-items-center float-start"
-    >
-      <fa-icon
-        [icon]="['fas', 'arrow-left-long']"
-        class="c-pointer close-icon me-2"
-        title="Back"
-      />Back
-    </button>
-    <button
-      (click)="nextPageSearch()"
-      class="btn btn-primary d-flex align-items-center float-end"
-    >
-      Next
-      <fa-icon
-        [icon]="['fas', 'arrow-right-long']"
-        class="c-pointer close-icon ms-2"
-        title="Next"
-      />
-    </button>
+    <div class="w-100 mt-5">
+      <button
+        *ngIf="!isFromHome"
+        (click)="backPreview()"
+        class="btn btn-primary d-flex align-items-center float-start"
+      >
+        <fa-icon
+          [icon]="['fas', 'arrow-left-long']"
+          class="c-pointer close-icon me-2"
+          title="Back"
+        />Back
+      </button>
+      <button
+        (click)="nextPageSearch()"
+        class="btn btn-primary d-flex align-items-center float-end"
+      >
+        Next
+        <fa-icon
+          [icon]="['fas', 'arrow-right-long']"
+          class="c-pointer close-icon ms-2"
+          title="Next"
+        />
+      </button>
+    </div>
   </div>
 </ng-container>
