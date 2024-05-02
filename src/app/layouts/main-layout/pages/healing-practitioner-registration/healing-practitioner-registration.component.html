@@ -6,8 +6,7 @@
         <div class="card text-center">
           <div class="card-body">
             <p class="card-text">
-              Find a Naturopathic Doctor or Holistic Practitioner to have a
-              private video consultation?
+              Find a Cryptocurrency Consultant and Schedule
             </p>
             <button>
               <a (click)="backPreview()" class="btn btn-primary">Select</a>
@@ -16,9 +15,7 @@
         </div>
         <div class="card text-center">
           <div class="card-body">
-            <p class="card-text">
-              Social discussion on how to heal various ailments?
-            </p>
+            <p class="card-text">Social Discussion On the Best Crypto</p>
             <button>
               <a href="/home" class="btn btn-primary">Select</a>
             </button>
@@ -26,11 +23,9 @@
         </div>
         <div class="card text-center">
           <div class="card-body">
-            <p class="card-text">
-              Watch videos from Naturopathic Doctors and Holistic Practitioners
-            </p>
+            <p class="card-text">Watch Videos on CryptoTube On the Best</p>
             <button>
-              <a href="https://video.ceyptoconsultants.tube/" class="btn btn-primary"
+              <a href="https://video.cryptoconsulting.tube/home" class="btn btn-primary"
                 >Select</a
               >
             </button>
@@ -42,7 +37,7 @@
 </ng-container>
 
 <ng-container *ngIf="selectPractitionerPage">
-  <div class="d-flex justify-content-center mt-10">
+  <!-- <div class="d-flex justify-content-center mt-10">
     <div class="d-flex flex-column">
       <div class="form-check">
         <input
@@ -104,17 +99,18 @@
         </label>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="healing-sub-container">
     <h2 class="text-center mt-10">
-      What emphasis are you interested in Crypto Consulting:
+      Emphasis of Consulting
     </h2>
     <div class="d-flex justify-content-center mt-5">
       <div class="d-flex flex-wrap justify-content-center">
         <div *ngFor="let card of cards" class="card text-center">
           <div class="card-body">
-            <h4 class="card-title">{{ card.title }}</h4>
+            <h4>{{ card.title }}</h4>
+            <!-- <h4 class="card-title">{{ card.title }}</h4> -->
             <p class="card-text">{{ card.description }}</p>
             <button (click)="selectCard(card.id)">
               <a
@@ -129,8 +125,8 @@
       </div>
     </div>
   </div>
-  <div class="d-flex flex-column mt-6">
-    <h4>Topics for Discussion with a Crypto Consulting Practitioner</h4>
+  <div class="d-flex flex-column mt-6 mt-sm-10">
+    <h4>Areas of Consulting</h4>
     <div class="container">
       <div class="row">
         <div *ngFor="let area of practitionerArea" class="col-md-6 col-lg-3">
@@ -154,7 +150,7 @@
       </div>
     </div>
   </div>
-  <div class="w-100 mt-5">
+  <div class="w-100 mt-5 mt-sm-20">
     <button
       *ngIf="!isFromHome"
       (click)="backPreview()"

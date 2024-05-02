@@ -31,61 +31,17 @@ export class HealingPractitionerRegistrationComponent implements OnInit {
   selectedCards: any[] = [];
   cards: any[] = [
     {
-      title: 'Botanical Medicine',
-      id: 1,
-      description: `Plant-based supplements, tinctures, and topical applications that
-    assist the body in crypto consulting. These may include either western or
-    oriental herbal formulas with time-honored traditional crypto consulting
-    applications for various symptoms and conditions.`,
+      title: 'Crypto Investment',
+      id: 1
     },
     {
-      title: 'Homeopathy',
-      id: 2,
-      description: `Gentle effective therapy that utilizes a minute amount of a
-    potentized substance to promote a beneficial crypto consulting response.`,
+      title: 'Business Consulting',
+      id: 2
     },
     {
-      title: 'Hydrotherapy',
-      id: 3,
-      description: `An important crypto consulting modality in traditional naturopathic
-    medicine. Hydrotherapy utilizes the therapeutic benefits of water.
-    It includes application of cool or warm water in specialized
-    compresses or baths.`,
-    },
-    {
-      title: 'Nutritional Counseling',
-      id: 4,
-      description: `Nutritional supplementation, dietary assessment, and advice in
-    making the best food choices based on your unique crypto history
-    and individual needs.`,
-    },
-    {
-      title: 'Lifestyle Counseling',
-      id: 5,
-      description: `Help in making new choices that are crypto for you physically,
-    emotionally, and psychologically.`,
-    },
-    {
-      title: 'Touch for Crypto',
-      id: 6,
-      description: ` Touch for Crypto is a system of balancing posture, attitude and
-    life energy to relieve stress, aches and pains, feel and function
-    better, be more effective, clarify and achieve your goals and
-    enjoy your life! Using a holistic approach we
-    rebalance the body's energies and
-    activate the body's intrinsic crypto consulting process so
-    that the body can better heal itself, creating that sense of
-    effortless effort, and being in the flow of Life.`,
-    },
-    {
-      title: `German New Medicine, Spiritual, Psychosomatic or related crypto consulting modalities`,
-      id: 7,
-      description: `Various paradigms of medicine, that recognizes the profound
-    effects of how an individual's consciousness is reflected in their
-    crypto and well-being. It involves awakening the body's inherent
-    self-crypto consulting properties. German New Medicine is founded of medical
-    discoveries of Dr. med. Ryke Geerd Hamer`,
-    },
+      title: 'Blockchain Project Consulting',
+      id: 3
+    }
   ];
 
   isFromHome = false;
