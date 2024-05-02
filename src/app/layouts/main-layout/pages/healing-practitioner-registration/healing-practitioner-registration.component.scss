@@ -64,18 +64,17 @@
 }
 
 .healing-sub-container{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: calc(100vh - 20px);
-  margin: auto;
-  justify-content: center;
   .card {
     width: 366px;
     background: var(--section-1st-color);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     margin: 10px;
+
+    .card-header {
+      background-color: unset;
+      border-color: var(--para-5th-color);
+    }
   
     .card-body {
       display: flex;
@@ -94,6 +93,19 @@
     }
     @media (max-width: 980px) {
       max-width: 300px;
+    }
+  }
+
+  .card-border{
+    border-color: var(--para-5th-color);
+
+    .select-text-options{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-align: start;
     }
   }
 }

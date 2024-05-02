@@ -25,24 +25,11 @@ export class HealingPractitionerRegistrationComponent implements OnInit {
 
   selectPractitionerPage: boolean;
 
-  practitionerArea: any = [];
+  consultantsArea: any = [];
+  consultantsEmphasis: any = [];
   selectedAreaValues: number[] = [];
 
   selectedCards: any[] = [];
-  cards: any[] = [
-    {
-      title: 'Crypto Investment',
-      id: 1
-    },
-    {
-      title: 'Business Consulting',
-      id: 2
-    },
-    {
-      title: 'Blockchain Project Consulting',
-      id: 3
-    }
-  ];
 
   isFromHome = false;
 
@@ -166,14 +153,15 @@ export class HealingPractitionerRegistrationComponent implements OnInit {
       this.router.navigate(['/crypto-consultants'], { state: { data: areaValues } });
     }
     else {
-      this.toastService.danger('Please select What emphasis are you interested in crypto consulting');
+      this.toastService.danger('Please select what emphasis are you interested in crypto consulting');
     }
   }
 
   getCategories() {
     this.communityService.getCategories().subscribe({
       next: (res) => {
-        this.practitionerArea = res.area;
+        this.consultantsArea = res.area;
+        this.consultantsEmphasis = res.emphasis;
       },
       error: (error) => {
         this.spinner.hide();
