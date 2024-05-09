@@ -47,6 +47,7 @@ export class MainLayoutComponent {
     ).subscribe((data: any) => {
       this.sidebar = data;
     });
+    
   }
 
   openLeftSidebar() {
