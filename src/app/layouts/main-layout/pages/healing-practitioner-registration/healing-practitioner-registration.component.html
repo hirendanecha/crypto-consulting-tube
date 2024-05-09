@@ -6,8 +6,7 @@
         <div class="card text-center">
           <div class="card-body">
             <p class="card-text">
-              Find a Naturopathic Doctor or Holistic Practitioner to have a
-              private video consultation?
+              Find a Cryptocurrency Consultant and Schedule
             </p>
             <button>
               <a (click)="backPreview()" class="btn btn-primary">Select</a>
@@ -16,9 +15,7 @@
         </div>
         <div class="card text-center">
           <div class="card-body">
-            <p class="card-text">
-              Social discussion on how to heal various ailments?
-            </p>
+            <p class="card-text">Social Discussion On the Best Crypto</p>
             <button>
               <a href="/home" class="btn btn-primary">Select</a>
             </button>
@@ -26,11 +23,9 @@
         </div>
         <div class="card text-center">
           <div class="card-body">
-            <p class="card-text">
-              Watch videos from Naturopathic Doctors and Holistic Practitioners
-            </p>
+            <p class="card-text">Watch Videos on CryptoTube On the Best</p>
             <button>
-              <a href="https://video.ceyptoconsultants.tube/" class="btn btn-primary"
+              <a href="https://video.cryptoconsulting.tube/home" class="btn btn-primary"
                 >Select</a
               >
             </button>
@@ -42,7 +37,7 @@
 </ng-container>
 
 <ng-container *ngIf="selectPractitionerPage">
-  <div class="d-flex justify-content-center mt-10">
+  <!-- <div class="d-flex justify-content-center mt-10">
     <div class="d-flex flex-column">
       <div class="form-check">
         <input
@@ -104,78 +99,81 @@
         </label>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="healing-sub-container">
-    <h2 class="text-center mt-10">
-      What emphasis are you interested in Crypto Consulting:
-    </h2>
+    <h2 class="text-center mt-10">Emphasis of Consulting</h2>
     <div class="d-flex justify-content-center mt-5">
       <div class="d-flex flex-wrap justify-content-center">
-        <div *ngFor="let card of cards" class="card text-center">
+        <div *ngFor="let card of consultantsEmphasis" class="card text-center">
           <div class="card-body">
-            <h4 class="card-title">{{ card.title }}</h4>
-            <p class="card-text">{{ card.description }}</p>
-            <button (click)="selectCard(card.id)">
+            <h4 class="mb-3">{{ card.name }}</h4>
+            <button (click)="selectCard(card.eId)">
               <a
                 class="btn"
-                [ngClass]="isSelected(card.id) ? 'btn-success' : 'btn-primary'"
+                [ngClass]="isSelected(card.eId) ? 'btn-success' : 'btn-primary'"
               >
-                {{ isSelected(card.id) ? "Selected" : "Select" }}</a
+                {{ isSelected(card.eId) ? "Selected" : "Select" }}</a
               >
             </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="d-flex flex-column mt-6">
-    <h4>Topics for Discussion with a Crypto Consulting Practitioner</h4>
-    <div class="container">
-      <div class="row">
-        <div *ngFor="let area of practitionerArea" class="col-md-6 col-lg-3">
-          <div class="form-check">
-            <div class="d-flex align-items-center">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                [value]="area.aId"
-                id="modality{{ area.aId }}"
-                (change)="onAreaboxChange($event, area)"
-              />
-              <div class="title-container">
-                <label class="form-check-label ms-2" for="modality{{ area.aId }}" [title]="area.name">
-                  {{ area.name }}
-                </label>
+    <div class="d-flex flex-column mt-6 mt-sm-10">
+      <h4>Areas of Consulting</h4>
+      <div class="container">
+        <div class="row justify-content-center">
+          <ng-container *ngFor="let card of consultantsEmphasis" class="col-md-6 col-lg-4">
+            <div class="card card-border text-center mb-3">
+              <div class="card-header h5">{{ card.name }}</div>
+              <div class="card-body">
+                <ng-container *ngFor="let area of consultantsArea">
+                  <div class="form-check" *ngIf="area.eId === card.eId">
+                    <div class="d-flex align-items-center">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        [value]="area.aId"
+                        id="modality{{ area.aId }}"
+                        (change)="onAreaboxChange($event, area)"
+                        [disabled]="!isSelected(card.eId)"
+                      />
+                      <label class="form-check-label ms-2 select-text-options cursor" for="modality{{ area.aId }}" [title]="area.name">
+                        {{ area.name }}
+                      </label>
+                    </div>
+                  </div>
+                </ng-container>
               </div>
             </div>
-          </div>
+          </ng-container>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-100 mt-5">
-    <button
-      *ngIf="!isFromHome"
-      (click)="backPreview()"
-      class="btn btn-primary d-flex align-items-center float-start"
-    >
-      <fa-icon
-        [icon]="['fas', 'arrow-left-long']"
-        class="c-pointer close-icon me-2"
-        title="Back"
-      />Back
-    </button>
-    <button
-      (click)="nextPageSearch()"
-      class="btn btn-primary d-flex align-items-center float-end"
-    >
-      Next
-      <fa-icon
-        [icon]="['fas', 'arrow-right-long']"
-        class="c-pointer close-icon ms-2"
-        title="Next"
-      />
-    </button>
+    <div class="w-100 mt-5">
+      <button
+        *ngIf="!isFromHome"
+        (click)="backPreview()"
+        class="btn btn-primary d-flex align-items-center float-start"
+      >
+        <fa-icon
+          [icon]="['fas', 'arrow-left-long']"
+          class="c-pointer close-icon me-2"
+          title="Back"
+        />Back
+      </button>
+      <button
+        (click)="nextPageSearch()"
+        class="btn btn-primary d-flex align-items-center float-end"
+      >
+        Next
+        <fa-icon
+          [icon]="['fas', 'arrow-right-long']"
+          class="c-pointer close-icon ms-2"
+          title="Next"
+        />
+      </button>
+    </div>
   </div>
 </ng-container>

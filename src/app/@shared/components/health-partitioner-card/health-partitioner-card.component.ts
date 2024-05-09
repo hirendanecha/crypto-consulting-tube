@@ -32,7 +32,7 @@ export class HealthPraatitionerCardComponent {
       this.router.navigate(['pages', this.community?.slug]);
     } else {
       if (this.community?.isApprove === 'Y') {
-        this.router.navigate(['crypto-consultants']);
+        this.router.navigate([`crypto-consultants/details/${this.community?.slug}`]);
       } else {
         this.toastService.danger('This crypto consultants not approve yet.');
       }

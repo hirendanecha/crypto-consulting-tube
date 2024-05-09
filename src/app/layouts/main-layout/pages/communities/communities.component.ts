@@ -95,7 +95,7 @@ export class CommunitiesComponent {
 
 
   createCommunity() {
-    this.router.navigate(['crypto-consultants/add-Consultants'])
+    this.router.navigate(['crypto-consultants/add-consultants'])
   }
   // createCommunity() {
   //   const modalRef = this.modalService.open(AddCommunityModalComponent, {

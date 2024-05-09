@@ -201,27 +201,28 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
       }
     }
     if (this.communityForm.valid && this.data.Id) {
-      this.communityService
-        .editCommunity(this.communityForm.value, this.data.Id)
-        .subscribe({
-          next: (res: any) => {
-            this.spinner.hide();
-            if (!res.error) {
-              this.submitted = true;
-              // this.createCommunityAdmin(res.data);
-              this.toastService.success(
+      const formData = this.communityForm.value;
+      formData['emphasis'] = this.selectedValues;
+      formData['areas'] = this.selectedAreaValues;
+      this.communityService.editCommunity(formData, this.data.Id).subscribe({
+        next: (res: any) => {
+          this.spinner.hide();
+          if (!res.error) {
+            this.submitted = true;
+            // this.createCommunityAdmin(res.data);
+            this.toastService.success(
                 'Your Crypto Consultants edit successfully!'
-              );
-              this.activeModal.close('success');
-            }
-          },
-          error: (err) => {
-            this.toastService.danger(
-              'Please change Crypto Consultants. this Crypto Consultants name already in use.'
             );
-            this.spinner.hide();
-          },
-        });
+            this.activeModal.close('success');
+          }
+        },
+        error: (err) => {
+          this.toastService.danger(
+              'Please change Crypto Consultants. this Crypto Consultants name already in use.'
+          );
+          this.spinner.hide();
+        },
+      });
     }
   }
 
@@ -326,6 +327,10 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
     });
   }
 
+  isSelected(id: number): boolean {
+    return this.selectedValues.includes(id);
+  }
+
   onCheckboxChange(event: any, emphasis: any): void {
     const isChecked = event.target.checked;
     if (isChecked) {
@@ -339,16 +344,20 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
   onAreaboxChange(event: any, area: any): void {
     const isChecked = event.target.checked;
     if (isChecked) {
-      this.selectedAreaValues.push(area.aId);
+      this.selectedAreaValues.push(area);
     } else {
       this.selectedAreaValues = this.selectedAreaValues.filter(
-        (id) => id !== area.aId
+        (id) => id !== area
       );
     }
   }
 
-  clearForm(){
-    this.router.navigate(['/crypto-consultants'])
+  clearForm() {
+    if (this.data.Id) {
+      this.activeModal.close();
+    } else {
+      this.router.navigate(['/crypto-consultants'])
+    }
   }
 
   convertToUppercase(event: any) {

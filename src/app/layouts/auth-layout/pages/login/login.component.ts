@@ -30,6 +30,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
   loginMessage = '';
   msg = '';
   type = 'danger';
+  passwordHidden: boolean = true;
+
 
   constructor(
     private modalService: NgbModal,
@@ -78,6 +80,11 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {}
+  
+  togglePasswordVisibility(passwordInput: HTMLInputElement) {
+    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+    this.passwordHidden = !this.passwordHidden;
+  }
 
   onSubmit(): void {
     this.spinner.show();

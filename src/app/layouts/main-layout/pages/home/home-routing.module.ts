@@ -14,16 +14,16 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
-  // {
-  //   path: 'communities/:name',
-  //   component: HomeComponent,
-  //   canActivate: mapToCanActivate([AuthenticationGuard]),
+  {
+    path: 'crypto-consultants/details/:name',
+    component: HomeComponent,
+    // canActivate: mapToCanActivate([AuthenticationGuard]),
    
-  // },
+  },
   {
     path: 'pages/:name',
     component: HomeComponent,
-    canActivate: mapToCanActivate([AuthenticationGuard]),
+    // canActivate: mapToCanActivate([AuthenticationGuard]),
   },
   {
     path: 'post/:id',
