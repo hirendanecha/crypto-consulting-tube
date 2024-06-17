@@ -192,7 +192,7 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
           },
           error: (err) => {
             this.toastService.danger(
-              'Please change practitioner. this practitioner name already in use.'
+              'Please change crypto consultants. this crypto consultants name already in use.'
             );
             this.spinner.hide();
           },
