@@ -424,7 +424,7 @@ else {
       data.link1 = this.sharedService?.advertizementLink[0]?.url;
       data.link2 = this.sharedService?.advertizementLink[1]?.url;
     }
-    modalRef.componentInstance.title = `Edit ${data.pageType} Details`;
+    modalRef.componentInstance.title = `Edit ${data.pageType === 'community' ? 'consultants' : 'consulting'} Details`;
     modalRef.componentInstance.cancelButtonLabel = 'Cancel';
     modalRef.componentInstance.confirmButtonLabel = 'Save';
     modalRef.componentInstance.closeIcon = true;
@@ -469,13 +469,13 @@ else {
     const modalRef = this.modalService.open(ConfirmationModalComponent, {
       centered: true,
     });
-    modalRef.componentInstance.title = `Leave ${this.communityDetails.pageType}`;
+    modalRef.componentInstance.title = `Leave ${this.communityDetails.pageType === 'community' ? 'consultants' : 'consulting'}`;
     modalRef.componentInstance.confirmButtonLabel = id ? 'Remove' : 'Leave';
     modalRef.componentInstance.cancelButtonLabel = 'Cancel';
     if (id) {
-      modalRef.componentInstance.message = `Are you sure want to remove this member from ${this.communityDetails.pageType}?`;
+      modalRef.componentInstance.message = `Are you sure want to remove this member from ${this.communityDetails.pageType === 'community' ? 'consultants' : 'consulting'}?`;
     } else {
-      modalRef.componentInstance.message = `Are you sure want to Leave from this ${this.communityDetails.pageType}?`;
+      modalRef.componentInstance.message = `Are you sure want to Leave from this ${this.communityDetails.pageType === 'community' ? 'consultants' : 'consulting'}?`;
     }
     modalRef.result.then((res) => {
       if (res === 'success') {
@@ -505,10 +505,10 @@ else {
     const modalRef = this.modalService.open(ConfirmationModalComponent, {
       centered: true,
     });
-    modalRef.componentInstance.title = `Delete ${this.communityDetails.pageType}`;
+    modalRef.componentInstance.title = `Delete ${this.communityDetails.pageType === 'community' ? 'consultants' : 'consulting'}`;
     modalRef.componentInstance.confirmButtonLabel = 'Delete';
     modalRef.componentInstance.cancelButtonLabel = 'Cancel';
-    modalRef.componentInstance.message = `Are you sure want to delete this ${this.communityDetails.pageType}?`;
+    modalRef.componentInstance.message = `Are you sure want to delete this ${this.communityDetails.pageType === 'community' ? 'consultants' : 'consulting'}?`;
     modalRef.result.then((res) => {
       if (res === 'success') {
         this.communityService

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfirmationModalComponent } from '../../modals/confirmation-modal/confirmation-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -10,7 +10,7 @@ import { ToastService } from 'src/app/@shared/services/toast.service';
   templateUrl: './health-partitioner-card.component.html',
   styleUrls: ['./health-partitioner-card.component.scss'],
 })
-export class HealthPraatitionerCardComponent {
+export class HealthPraatitionerCardComponent implements OnInit {
   @Input('community') community: any = {};
   @Input('type') type: string = '';
   @Output('getCommunities') getCommunities: EventEmitter<void> =
@@ -26,6 +26,10 @@ export class HealthPraatitionerCardComponent {
   ) {
     this.profileId = Number(localStorage.getItem('profileId'));
   }
+
+  ngOnInit(): void {
+    console.log(this.community.emphasis);
+   }
 
   goToCommunityDetailPage(): void {
     if (this.community.pageType === 'page') {
