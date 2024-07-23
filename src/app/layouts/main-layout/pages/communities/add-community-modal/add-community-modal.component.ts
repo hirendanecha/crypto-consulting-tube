@@ -111,7 +111,8 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
       this.communityForm.get('State').enable();
       this.communityForm.get('City').enable();
       this.communityForm.get('County').enable();
-      console.log(this.data);
+      this.selectedValues = this.data.emphasis.map((emphasis: any) => emphasis.eId);
+      this.selectedAreaValues = this.data.areas.map((area: any) => area.aId);
     }
   }
 

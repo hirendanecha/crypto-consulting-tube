@@ -90,6 +90,7 @@
           name="State"
           class="input-area w-100"
           [(ngModel)]="selectedState"
+          [ngModelOptions]="{standalone: true}"
         >
           <option [value]="item.state" *ngFor="let item of allStateData">
             {{ item.state }}
@@ -210,6 +211,7 @@
                 [value]="emphasis.eId"
                 id="modality{{ emphasis.eId }}"
                 (change)="onCheckboxChange($event, emphasis)"
+                [checked]="selectedValues?.includes(emphasis.eId)"
               />
               <div class="title-container">
                 <label class="form-check-label ms-2 cursor" for="modality{{ emphasis.eId }}" [title]="emphasis.name">
@@ -239,6 +241,7 @@
                       [value]="area.aId"
                       id="modality{{ area.aId }}"
                       (change)="onAreaboxChange($event, area.aId)"
+                      [checked]="selectedAreaValues?.includes(area.aId)"
                       [disabled]="!isSelected(area.eId)"
                     />
                     <label class="form-check-label ms-2 select-text-options cursor" for="modality{{ area.aId }}" [title]="area.name">
