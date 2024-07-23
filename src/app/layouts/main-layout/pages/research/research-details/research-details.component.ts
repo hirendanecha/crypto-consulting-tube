@@ -41,7 +41,7 @@ export class ResearchDetailsComponent {
           this.groupDetails = res;
           const data = {
             title: `CryptoConsultingTube Crypto Research ${this.groupDetails?.PageTitle}`,
-            url: `${window.location.href}`,
+            url: `${location.href}`,
             description: this.groupDetails?.PageDescription,
             image: this.groupDetails?.CoverPicName || this.groupDetails?.ProfilePicName
           };

@@ -102,7 +102,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       });
       const data = {
         title: 'CryptoConsultingTube',
-        url: `${window.location.href}`,
+        url: `${location.href}`,
       };
       this.seoService.updateSeoMetaData(data);
     }

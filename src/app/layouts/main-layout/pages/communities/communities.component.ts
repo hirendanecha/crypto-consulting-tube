@@ -38,7 +38,7 @@ export class CommunitiesComponent {
     // this.getCommunities();
     const data = {
       title: 'CryptoConsultingTube Crypto Consultants',
-      url: `${window.location.href}`,
+      url: `${location.href}`,
       description: '',
     };
     this.seoService.updateSeoMetaData(data);
