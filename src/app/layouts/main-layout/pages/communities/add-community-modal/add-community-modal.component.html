@@ -89,8 +89,7 @@
           required
           name="State"
           class="input-area w-100"
-          [(ngModel)]="selectedState"
-          [ngModelOptions]="{standalone: true}"
+          formControlName="State"
         >
           <option [value]="item.state" *ngFor="let item of allStateData">
             {{ item.state }}
