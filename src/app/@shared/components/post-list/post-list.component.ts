@@ -129,7 +129,7 @@ export class PostListComponent implements OnInit, OnChanges, AfterViewInit {
       this.postService.getPostsByProfileId(data).subscribe({
         next: (res: any) => {
           this.isPostLoader = false;
-          this.isLoading = false;
+          this.isLoading = true;
           if (res?.data.data.length > 0) {
             this.postList = [...this.postList, ...res?.data.data];
           } else {
@@ -156,7 +156,7 @@ export class PostListComponent implements OnInit, OnChanges, AfterViewInit {
           if (res?.data.data.length > 0) {
             this.postList = [...this.postList, ...res?.data.data];
           } else {
-            this.hasMoreData = false;
+            this.hasMoreData = true;
           }
         },
         error: (error) => {
